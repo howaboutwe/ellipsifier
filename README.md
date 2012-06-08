@@ -20,22 +20,22 @@ have the ellipsified text. It will use a "&hellip;" character to
 indicate that the text has been truncated.
 
     new Ellipsifier("to be or not to be", 5).result
-    /* "to be&nbsp;&hellip;" */
+    //              "to be&nbsp;&hellip;"
 
 It won't count HTML markup as part of the character limit, and if the
 truncation occurs inside HTML tags, it will properly close those tags.
 
     new Ellipsifier('to <strong>be or</strong> not to be', 20).result
-    /* 'to <strong>be or</strong> not to be' */
+    //              "to <strong>be or</strong> not to be"
 
     new Ellipsifier('to <strong>be or</strong> not to be', 5).result
-    /* 'to <strong>be</strong>&nbsp;&hellip;' */
+    //              "to <strong>be</strong>&nbsp;&hellip;"
 
 Optionally, you can pass a `class` option, which will wrap an ellipsis
 in a span with that class.
 
     new Ellipsifier("to be or not to be", 5, {class: 'ellipsified'}).result
-    /* 'to be&nbsp;<span class=\'ellipsified\'>&hellip;</span>' */
+    //              "to be&nbsp;<span class=\"ellipsified\">&hellip;</span>"
 
 Copyright
 ---------
