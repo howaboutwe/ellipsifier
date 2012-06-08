@@ -44,7 +44,7 @@ describe('Ellipsifier', function () {
     ).toEqual('to <strong>be <br />or</strong>&nbsp;&hellip;');
   });
 
-  it('adds the ellipsi class even if it has to deal with HTML', function() {
+  it('adds the ellipsis class even if it has to deal with HTML', function() {
     expect(
       results('to <strong>be or</strong> not to be', 5, {class: 'ellipsified'})
     ).toEqual(
